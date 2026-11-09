@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BuildDesk — small dev jobs, done in 24 hours</title>
-<meta name="description" content="Scripts, scrapers, spreadsheet cleanup and landing pages. Fixed price, delivered in 24 hours. Start from ₹1,499 / $19.">
+<title>Abhi does the small technical job you keep putting off</title>
+<meta name="description" content="Scripts, spreadsheets, scrapers, broken code. Fixed price from Rs 1,499. Back by tomorrow. UPI and PayPal.">
 <style>
   :root{
     --bg:#0b0d10; --card:#12161c; --line:#222a35; --fg:#e8edf4;
@@ -12,47 +12,46 @@
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+    font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
     -webkit-font-smoothing:antialiased}
-  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
   a{color:var(--acc2)}
-  h1,h2,h3{line-height:1.2;letter-spacing:-.02em;margin:0}
-  .hero{padding:72px 0 44px;border-bottom:1px solid var(--line)}
-  .badge{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--acc);
-    border:1px solid #1f3d2c;background:#0f1a14;padding:6px 12px;border-radius:999px;margin-bottom:22px}
+  h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .badge{display:inline-flex;gap:8px;align-items:center;font-size:13.5px;color:var(--acc);
+    border:1px solid #1f3d2c;background:#0f1a14;padding:6px 12px;border-radius:999px;margin-bottom:24px}
   .dot{width:6px;height:6px;border-radius:50%;background:var(--acc)}
-  h1{font-size:clamp(30px,5vw,52px);font-weight:800;max-width:19ch}
-  .sub{color:var(--mut);font-size:clamp(16px,2vw,19px);margin:20px 0 0;max-width:56ch}
-  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  h1{font-size:clamp(29px,4.6vw,47px);font-weight:780;max-width:21ch}
+  .sub{color:#a9b5c5;font-size:clamp(16px,1.9vw,18.5px);margin:22px 0 0;max-width:52ch}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;
     font-weight:650;font-size:15px;text-decoration:none;border:1px solid var(--line);
     color:var(--fg);background:var(--card);cursor:pointer;transition:.15s}
   .btn:hover{transform:translateY(-1px);border-color:#33404f}
   .btn.primary{background:var(--acc);border-color:var(--acc);color:#06130b;font-weight:750}
   .btn.primary:hover{background:#5ae88f}
-  section{padding:56px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:clamp(22px,3vw,30px);font-weight:750;margin-bottom:8px}
-  .lead{color:var(--mut);margin:0 0 32px;max-width:60ch}
-  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(21px,2.8vw,27px);font-weight:740;margin-bottom:10px}
+  .lead{color:var(--mut);margin:0 0 30px;max-width:60ch}
+  .tiers{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
   .card h3{font-size:17px;margin-bottom:10px}
-  .price{font-size:32px;font-weight:800;letter-spacing:-.03em;margin:6px 0 2px}
+  .price{font-size:31px;font-weight:800;letter-spacing:-.03em;margin:6px 0 2px}
   .price span{font-size:14px;font-weight:500;color:var(--mut)}
   .card ul{margin:14px 0 20px;padding-left:18px;color:var(--mut);font-size:14.5px}
-  .card li{margin:5px 0}
+  .card li{margin:6px 0}
   .payrow{display:flex;gap:8px;flex-wrap:wrap}
   .payrow .btn{padding:10px 16px;font-size:14px;flex:1;justify-content:center;min-width:120px}
+  .jobs{display:grid;border-top:1px solid var(--line)}
+  .job{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .job b{min-width:152px;font-size:15px;font-weight:680;flex-shrink:0}
+  .job p{margin:0;color:var(--mut);font-size:15px}
   .flow{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));counter-reset:s}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;position:relative}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
   .step:before{counter-increment:s;content:counter(s);display:block;font-size:12px;font-weight:800;
     color:var(--acc);margin-bottom:10px;letter-spacing:.1em}
   .step b{display:block;margin-bottom:6px;font-size:15px}
-  .step p{margin:0;color:var(--mut);font-size:14px}
-  .samples{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-  .sample{border:1px solid var(--line);border-radius:12px;padding:18px;background:#0e1217}
-  .sample b{font-size:15px;display:block;margin-bottom:6px}
-  .sample p{margin:0;color:var(--mut);font-size:14px}
-  .tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--acc2);font-weight:700}
+  .step p{margin:0;color:var(--mut);font-size:14.5px}
   form{display:grid;gap:12px;max-width:600px}
   label{font-size:13px;color:var(--mut);font-weight:600;display:block;margin-bottom:6px}
   input,textarea,select{width:100%;background:#0e1217;border:1px solid var(--line);color:var(--fg);
@@ -65,89 +64,83 @@
   .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
   .small{font-size:13px}
   .muted{color:var(--mut)}
-  footer{padding:40px 0 64px;color:var(--mut);font-size:13.5px}
-  .kb{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+  .note{border-left:2px solid var(--line);padding-left:16px;color:var(--mut);font-size:15px;margin:26px 0 0}
+  footer{padding:36px 0 60px;color:var(--mut);font-size:13.5px}
+  @media(max-width:520px){.job{flex-direction:column;gap:4px}}
 </style>
 </head>
 <body>
 
 <div class="hero"><div class="wrap">
-  <div class="badge"><span class="dot"></span>Taking 3 jobs this week · next slot free now</div>
-  <h1>Small dev jobs, done in 24 hours.</h1>
-  <p class="sub">Scripts, scrapers, spreadsheet cleanup and landing pages.
-     Fixed price, fixed deadline, delivery text goes in your chat.
-     No calls, no scope creep, no "let's hop on a call".</p>
+  <div class="badge"><span class="dot"></span>Free tonight, can start now</div>
+  <h1>I do the small technical job you keep putting off.</h1>
+  <p class="sub">You know the one. The spreadsheet that eats two hours every month. The script that broke in March. The thing you've been copying by hand for a year. I'll do it by tomorrow, for a price we agree first.</p>
   <div class="cta">
-    <a class="btn primary" href="#pricing">See prices</a>
-    <a class="btn" href="#brief">Send a brief →</a>
+    <a class="btn primary" href="#pricing">What it costs</a>
+    <a class="btn" href="#brief">Tell me the job</a>
   </div>
 </div></div>
 
 <section><div class="wrap">
-  <h2>What people actually buy</h2>
-  <p class="lead">The unglamorous work that eats your week. If it can be done once and scripted forever, that's the job.</p>
-  <div class="samples">
-    <div class="sample"><span class="tag">data</span><b>"Clean up this 40k-row sheet"</b>
-      <p>Dedupe, normalise addresses/phones/dates, merge duplicates, flag bad rows, hand back a clean file + a script that does it again next month.</p></div>
-    <div class="sample"><span class="tag">scraping</span><b>"Pull these listings every morning"</b>
-      <p>Scraper for a public site into CSV/Sheets, on a schedule, with a change-alert email when a price or a new listing appears.</p></div>
-    <div class="sample"><span class="tag">web</span><b>"Landing page by Friday"</b>
-      <p>One-page site, mobile-first, deployed to a URL you own. Copy tightened, form wired, loads fast, no builder subscription.</p></div>
-    <div class="sample"><span class="tag">automation</span><b>"Stop me doing this by hand"</b>
-      <p>Anything repetitive: PDF → spreadsheet, invoices → tracker, form → CRM, weekly report → email. Runs on a schedule.</p></div>
-    <div class="sample"><span class="tag">docs</span><b>"Turn this mess into docs"</b>
-      <p>Meeting notes, a folder of PDFs or a legacy repo → one clear README / SOP / decision doc that a new hire can follow.</p></div>
-    <div class="sample"><span class="tag">fix</span><b>"My script broke"</b>
-      <p>Bring the traceback. You get a fix, an explanation of why it broke, and a guard so it doesn't happen again.</p></div>
+  <h2>Things I get asked for</h2>
+  <p class="lead">If your job isn't on this list, ask anyway. The answer is usually yes.</p>
+  <div class="jobs">
+    <div class="job"><b>Spreadsheet mess</b><p>Dedupe it, fix the phone numbers and dates, merge the people who are in there twice under slightly different names, flag the rows that look wrong. You get the clean file and a script, so next month is one command instead of two hours.</p></div>
+    <div class="job"><b>Pulling data off a site</b><p>Listings, prices, contact details, whatever's on the page. Into a CSV or a Google Sheet. On a schedule, if you want it to keep happening after this week.</p></div>
+    <div class="job"><b>Something broke</b><p>You pasted the traceback somewhere and got nowhere. Send it. I'll find the actual cause, which is usually not the line the error points at, and stop it happening again.</p></div>
+    <div class="job"><b>PDFs and invoices</b><p>A folder of them that should have been a table all along. Two hundred files into one Excel sheet, named properly, one row each.</p></div>
+    <div class="job"><b>A page that works</b><p>One page. Loads fast, right on a phone, form at the end goes where you actually want it to go. Written by hand, no builder, no monthly bill.</p></div>
+    <div class="job"><b>The monthly report</b><p>The thing you rebuild by copy and paste every month. Turns into one command that produces the same report with the new numbers in it.</p></div>
   </div>
+  <p class="note">I don't do mobile apps, logos, or anything where the answer starts with "let's get on a call". Not my trade, and you'd be paying me to learn it.</p>
 </div></section>
 
 <section id="pricing"><div class="wrap">
-  <h2>Fixed prices</h2>
-  <p class="lead">Pay half up front on the big ones, or all of it — your call. If I miss the deadline, you don't pay the balance.</p>
-  <div class="grid">
+  <h2>Prices</h2>
+  <p class="lead">Fixed, agreed before I start. If I miss the deadline you don't pay the rest of it.</p>
+  <div class="tiers">
     <div class="card">
       <h3>Quick Fix</h3>
       <div class="price">₹1,499 <span>/ $19</span></div>
-      <p class="small muted">One small job, 24-hour turnaround.</p>
+      <p class="small muted">One small job. Back tomorrow.</p>
       <ul>
-        <li>One script, bug fix or sheet cleanup</li>
-        <li>Up to ~2 hours of work</li>
-        <li>Delivered with a short "how to run it" note</li>
-        <li>One round of revisions</li>
+        <li>One script, one fix, one cleanup</li>
+        <li>About two hours of my time</li>
+        <li>A short note saying how to run it</li>
+        <li>I redo it once if I got it wrong</li>
       </ul>
       <div class="payrow">
-        <button class="btn primary" onclick="openPay('quick','upi')">Pay ₹1,499</button>
+        <button class="btn primary" onclick="openPay('quick','upi')">₹1,499</button>
         <button class="btn" onclick="openPay('quick','paypal')">$19</button>
       </div>
     </div>
     <div class="card">
       <h3>Full Build</h3>
       <div class="price">₹3,499 <span>/ $39</span></div>
-      <p class="small muted">A complete small deliverable.</p>
+      <p class="small muted">The whole thing, working.</p>
       <ul>
-        <li>Scraper, landing page, automation or doc set</li>
-        <li>Up to ~6 hours of work</li>
-        <li>Deployed / scheduled and tested</li>
-        <li>Two rounds of revisions</li>
+        <li>A scraper, a page, a pipeline, a set of docs</li>
+        <li>About six hours of my time</li>
+        <li>Set up on a schedule and tested for real</li>
+        <li>Two rounds of changes</li>
       </ul>
       <div class="payrow">
-        <button class="btn primary" onclick="openPay('build','upi')">Pay ₹3,499</button>
+        <button class="btn primary" onclick="openPay('build','upi')">₹3,499</button>
         <button class="btn" onclick="openPay('build','paypal')">$39</button>
       </div>
     </div>
     <div class="card">
-      <h3>Automation Sprint</h3>
+      <h3>The big one</h3>
       <div class="price">₹7,499 <span>/ $89</span></div>
-      <p class="small muted">A whole workflow, end to end.</p>
+      <p class="small muted">When it touches more than one tool.</p>
       <ul>
-        <li>Multi-step pipeline across 2–3 tools</li>
-        <li>Up to ~15 hours of work</li>
-        <li>Runs on a schedule, monitored</li>
-        <li>1 week of free fixes after delivery</li>
+        <li>Several steps across two or three systems</li>
+        <li>Up to fifteen hours of my time</li>
+        <li>Runs itself and tells you when it fails</li>
+        <li>A week of free fixes after handover</li>
       </ul>
       <div class="payrow">
-        <button class="btn primary" onclick="openPay('sprint','upi')">Pay ₹7,499</button>
+        <button class="btn primary" onclick="openPay('sprint','upi')">₹7,499</button>
         <button class="btn" onclick="openPay('sprint','paypal')">$89</button>
       </div>
     </div>
@@ -156,46 +149,44 @@
 </div></section>
 
 <section><div class="wrap">
-  <h2>How it works</h2>
-  <p class="lead">Four steps, no meeting.</p>
+  <h2>How it goes</h2>
+  <p class="lead">Four steps. No meeting at any point.</p>
   <div class="flow">
-    <div class="step"><b>Send the brief</b><p>What you need, the link or file, and your deadline. Two minutes.</p></div>
-    <div class="step"><b>I confirm in 2 hours</b><p>You get a yes/no and a fixed price before any money moves.</p></div>
-    <div class="step"><b>Pay to start</b><p>UPI for India, PayPal internationally. Half up front on Sprints.</p></div>
-    <div class="step"><b>Delivered in 24h</b><p>Working thing + how to run it. You test it, I fix what's broken.</p></div>
+    <div class="step"><b>You tell me the job</b><p>What's happening now, what should happen instead, and the file or the link. Two minutes of your time.</p></div>
+    <div class="step"><b>I say yes or no</b><p>Within the hour, with a price. Sometimes it's no, and I'd rather tell you that than take your money.</p></div>
+    <div class="step"><b>You pay</b><p>UPI if you're in India, PayPal if you're not. The big one is half now, half on delivery.</p></div>
+    <div class="step"><b>You get it back</b><p>Tomorrow. You run it. If it doesn't work on your machine, that's my problem and not yours.</p></div>
   </div>
 </div></section>
 
 <section id="brief"><div class="wrap">
-  <h2>Send a brief</h2>
-  <p class="lead">Fill this in — it opens a pre-written email. No account needed.</p>
+  <h2>Tell me the job</h2>
+  <p class="lead">Fill this in and it writes the message for you. No account, no form service, nothing gets stored anywhere.</p>
   <form onsubmit="sendBrief(event)">
-    <div><label>Which one?</label>
+    <div><label>Which size</label>
       <select name="tier">
-        <option>Quick Fix — ₹1,499 / $19</option>
-        <option>Full Build — ₹3,499 / $39</option>
-        <option>Automation Sprint — ₹7,499 / $89</option>
-        <option>Not sure — quote me</option>
+        <option>Quick Fix, ₹1,499 / $19</option>
+        <option>Full Build, ₹3,499 / $39</option>
+        <option>The big one, ₹7,499 / $89</option>
+        <option>No idea, tell me what it costs</option>
       </select></div>
-    <div><label>What needs doing?</label>
-      <textarea name="task" required placeholder="e.g. I have a Google Sheet of 12,000 customer rows with duplicate phone numbers in mixed formats. I need it deduped and normalised to +91 format, plus a script I can rerun monthly."></textarea></div>
-    <div><label>Tools / stack involved</label>
-      <input name="stack" placeholder="e.g. Python, Google Sheets, Shopify, Excel"></div>
-    <div><label>Deadline</label><input name="deadline" placeholder="e.g. within 24h / by Friday"></div>
-    <div><label>Link or file</label><input name="link" placeholder="Google Drive / repo / URL"></div>
-    <div><label>Payment method</label>
-      <select name="paid"><option>UPI</option><option>PayPal</option><option>Not paid yet</option></select></div>
-    <button class="btn primary" type="submit" style="justify-self:start">Open brief in mail →</button>
+    <div><label>What's the job</label>
+      <textarea name="task" required placeholder="I've got a sheet of about 12,000 customers. Phone numbers are in four different formats and there are people in there twice under slightly different names. I need it clean, and I need to be able to redo it next month without asking anyone."></textarea></div>
+    <div><label>What's it in right now</label>
+      <input name="stack" placeholder="Excel, Google Sheets, Python, Shopify"></div>
+    <div><label>When do you need it</label><input name="deadline" placeholder="Tomorrow is fine / by Friday"></div>
+    <div><label>File or link</label><input name="link" placeholder="Drive link, repo, URL"></div>
+    <div><label>Paying by</label>
+      <select name="paid"><option>UPI</option><option>PayPal</option><option>Not yet</option></select></div>
+    <button class="btn primary" type="submit" style="justify-self:start">Write the message</button>
     <p id="brief-status" class="small muted" style="margin:0"></p>
     <pre id="brief-out" class="mono small" style="display:none;background:#0e1217;border:1px solid #222a35;border-radius:10px;padding:14px;white-space:pre-wrap;margin:0"></pre>
   </form>
 </div></section>
 
 <footer><div class="wrap">
-  <div class="kb">
-    <span>Fixed price</span><span>·</span><span>24h turnaround</span><span>·</span><span>UPI &amp; PayPal</span><span>·</span><span>No meetings</span>
-  </div>
-  <p style="margin:0">BuildDesk — small dev jobs, done properly. Reply-time: usually under 2 hours, 09:00–23:00 IST.</p>
+  <p style="margin:0">Abhi. Delhi. I answer within the hour between 9am and 11pm IST.
+     UPI and PayPal. If a job turns out to be easy, I'll tell you it's easy and charge you for the small one.</p>
 </div></footer>
 
 <script src="app.js"></script>
