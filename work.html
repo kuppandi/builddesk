@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A real job, start to finish — Abhi</title>
+<style>
+  :root{--bg:#0b0d10;--card:#12161c;--line:#222a35;--fg:#e8edf4;--mut:#8e9aab;--acc:#4ade80;--acc2:#38bdf8;--red:#f87171}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+  a{color:var(--acc2)}
+  h1,h2{line-height:1.15;letter-spacing:-.02em;margin:0}
+  header{padding:56px 0 34px;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(27px,4vw,40px);font-weight:780;max-width:22ch}
+  .sub{color:#a9b5c5;font-size:17px;margin:18px 0 0;max-width:56ch}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;font-weight:730;margin-bottom:8px}
+  .lead{color:var(--mut);margin:0 0 26px;max-width:60ch}
+  .stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0 0 26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .stat b{display:block;font-size:30px;font-weight:820;letter-spacing:-.03em;color:var(--acc)}
+  .stat span{font-size:13.5px;color:var(--mut)}
+  table{width:100%;border-collapse:collapse;font-size:13px;font-family:ui-monospace,Menlo,monospace;display:block;overflow-x:auto}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #1b222c;white-space:nowrap}
+  th{color:var(--mut);font-weight:650;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em}
+  .bad td{color:#c98b8b}
+  .good td{color:#bfe6cd}
+  .label{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:750;margin:26px 0 10px}
+  .label.b{color:var(--red)} .label.g{color:var(--acc)}
+  pre{background:#0e1217;border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;
+      font-size:13px;line-height:1.6;margin:0}
+  .dl{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .btn{display:inline-flex;padding:11px 18px;border-radius:9px;border:1px solid var(--line);
+       background:var(--card);color:var(--fg);text-decoration:none;font-size:14.5px;font-weight:640}
+  .btn.p{background:var(--acc);border-color:var(--acc);color:#06130b;font-weight:750}
+  .note{border-left:2px solid var(--line);padding-left:15px;color:var(--mut);font-size:15px;margin:24px 0 0}
+  footer{padding:34px 0 60px;color:var(--mut);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>One job, start to finish, with the files.</h1>
+  <p class="sub">Not a portfolio of pretty screenshots. This is the actual input, the actual
+     output, and the actual script. Run it yourself before you pay me anything.</p>
+</header>
+
+<section>
+  <h2>The setup</h2>
+  <p class="lead">Someone sends over a customer list their team has been maintaining by hand for
+     two years. 564 rows, four different phone formats, dates that don't sort, the same person
+     in there twice under two spellings, and a handful of rows that are just broken.</p>
+
+  <div class="stats">
+    <div class="stat"><b>564</b><span>rows in</span></div>
+    <div class="stat"><b>504</b><span>rows out</span></div>
+    <div class="stat"><b>60</b><span>removed or merged</span></div>
+    <div class="stat"><b>16</b><span>flagged for a human</span></div>
+  </div>
+
+  <div class="label b">Before — what they sent</div>
+  <table class="bad">
+    <tr><th>name</th><th>email</th><th>phone</th><th>city</th><th>signup</th></tr>
+    <tr><td>&nbsp;&nbsp;Amit Gupta&nbsp;</td><td>amit.gupta@gmail.com</td><td>+91 59956 40528</td><td>lucknow</td><td>27-5-2024</td></tr>
+    <tr><td>Vikram Sharma</td><td>vikram.sharma@example.in</td><td>04868850030</td><td>chennai</td><td>7-11-2025</td></tr>
+    <tr><td>&nbsp;&nbsp;Priya Iyer&nbsp;</td><td>priya.iyer@YAHOO.COM</td><td>+91 43823 92391</td><td>pune</td><td>09/07/2025</td></tr>
+    <tr><td>(blank)</td><td>ghost@nowhere.com</td><td>9999999999</td><td>delhi</td><td>01/01/2024</td></tr>
+    <tr><td>Ravi Kumar</td><td>not-an-email</td><td>+91 98765</td><td>mumbai</td><td>31/31/2024</td></tr>
+  </table>
+
+  <div class="label g">After — what comes back</div>
+  <table class="good">
+    <tr><th>name</th><th>email</th><th>phone</th><th>city</th><th>signup</th></tr>
+    <tr><td>Amit Gupta</td><td>amit.gupta@gmail.com</td><td>+91 59956 40528</td><td>Lucknow</td><td>2024-05-27</td></tr>
+    <tr><td>Vikram Sharma</td><td>vikram.sharma@example.in</td><td>+91 48688 50030</td><td>Chennai</td><td>2025-11-07</td></tr>
+    <tr><td>Priya Iyer</td><td>priya.iyer@yahoo.com</td><td>+91 43823 92391</td><td>Pune</td><td>2025-07-09</td></tr>
+    <tr><td colspan="5" style="color:#8e9aab">row dropped: no name to keep it under</td></tr>
+    <tr><td>Ravi Kumar</td><td style="color:#e0b25c">(blank, invalid)</td><td style="color:#e0b25c">(blank, too short)</td><td>Mumbai</td><td style="color:#e0b25c">(blank, 31/31 isn't a date)</td></tr>
+  </table>
+
+  <div class="label">What the script printed</div>
+  <pre>rows in : 564
+rows out: 504
+removed : 60
+  bad: invalid email: 6
+  bad: unreadable date: 6
+  bad: unusable phone: 4
+  dropped: no name: 8
+  merged: duplicate by name: 3
+  merged: duplicate person: 49
+needs a human eye: 16</pre>
+
+  <div class="dl">
+    <a class="btn" href="samples/messy_customers.csv">messy_customers.csv (564 rows)</a>
+    <a class="btn" href="samples/clean_customers.csv">clean_customers.csv (504 rows)</a>
+    <a class="btn" href="samples/clean_customers.py">clean_customers.py</a>
+  </div>
+
+  <p class="note">Two things I deliberately did not do: guess a phone number that was too short
+     to fix, and delete rows silently because their name was blank. Bad values get blanked and
+     counted, not invented. Rows that fail get flagged, not thrown away. If your data matters
+     enough to clean, it matters enough that you can see what was changed.</p>
+</section>
+
+<section>
+  <h2>Why you're looking at a CSV and not a screenshot</h2>
+  <p class="lead">Because anyone can put a logo in a grid. The only question that matters before
+     you pay a stranger ₹1,499 is whether the output is any good, and you can only answer that by
+     opening the file. So it's here. Download it, run the script on your own sheet, break it,
+     see what happens.</p>
+  <p class="lead">If it does what you need, the job is the same one for your file, back tomorrow.</p>
+  <div class="dl">
+    <a class="btn p" href="./">Tell me the job</a>
+  </div>
+</section>
+
+<footer>Abhi. Delhi. <a href="./">back to the prices</a></footer>
+
+</div>
+</body>
+</html>
