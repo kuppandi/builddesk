@@ -5,7 +5,7 @@ const CONFIG = {
   UPI_ID:        "",   // e.g. abhi@okhdfcbank  — blank = pay-by-request
   UPI_NAME:      "Abhi",
   PAYPAL:        "",   // e.g. abhi100 -> https://paypal.me/abhi100
-  CONTACT_EMAIL: ""    // blank = form falls back to copy-able brief
+  CONTACT_EMAIL: "iamabhivp@gmail.com"    // blank = form falls back to copy-able brief
 };
 /* ============================================================ */
 
