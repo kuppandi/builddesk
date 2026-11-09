@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1280px;height:769px;overflow:hidden}
+  body{background:#0b0d10;color:#e8edf4;font-family:-apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+       display:flex;flex-direction:column;justify-content:center;padding:0 76px;position:relative}
+  .glow{position:absolute;width:900px;height:900px;border-radius:50%;
+        background:radial-gradient(circle,rgba(74,222,128,.16),transparent 62%);
+        right:-330px;top:-330px}
+  .glow2{position:absolute;width:700px;height:700px;border-radius:50%;
+        background:radial-gradient(circle,rgba(56,189,248,.13),transparent 62%);
+        left:-260px;bottom:-330px}
+  .kick{display:flex;align-items:center;gap:11px;font-size:23px;font-weight:700;color:#4ade80;
+        letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+  .dot{width:11px;height:11px;border-radius:50%;background:#4ade80}
+  h1{font-size:76px;line-height:1.03;font-weight:850;letter-spacing:-.035em;max-width:15ch}
+  .sub{font-size:29px;color:#93a1b5;margin-top:26px;max-width:26ch;line-height:1.4}
+  .row{display:flex;gap:14px;margin-top:46px;flex-wrap:wrap}
+  .pill{border:1.5px solid #29323f;border-radius:999px;padding:11px 24px;font-size:22px;
+        color:#cfd8e4;font-weight:600;background:#12161c}
+  .pill.on{border-color:#4ade80;color:#0b0d10;background:#4ade80;font-weight:800}
+  .brand{position:absolute;right:76px;bottom:54px;font-size:24px;font-weight:800;color:#5d6b7d;
+         letter-spacing:.02em}
+  .price{position:absolute;left:76px;bottom:48px;font-size:30px;font-weight:800;color:#e8edf4}
+  .price span{color:#4ade80}
+</style></head><body>
+  <div class="glow"></div><div class="glow2"></div>
+  <div class="kick"><span class="dot"></span>DELIVERED IN 24 HOURS</div>
+  <h1>Python scripts that do the boring thing for you</h1>
+  <p class="sub">Automation, scrapers, file wrangling — fixed price, no meetings.</p>
+  <div class="row"><span class="pill on">Any repetitive task</span><span class="pill">CSV / Sheets</span><span class="pill">Scraping</span><span class="pill">Bots</span></div>
+  <div class="price">from <span>₹1,499</span> / $19</div>
+  <div class="brand">BuildDesk</div>
+</body></html>
